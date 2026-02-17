@@ -1,0 +1,1 @@
+GiftHub (PREPE) es un ecosistema digital que usa IA para simplificar la elección de regalos. Mediante un chatbot asesor, ofrece recomendaciones personalizadas de productos y experiencias. Incluye pagos seguros, seguimiento en tiempo real y gamificación, conectando emocionalmente a usuarios y proveedores de forma eficiente.
