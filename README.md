@@ -1,4 +1,4 @@
-# 🎁 GiftHub – PREPE
+# 🧠 Memora – PREPE
 
 Sistema de Asesoría Inteligente mediante Chatbot con IA para la Recomendación Personalizada de Regalos según Ocasión, Presupuesto y Perfil del Usuario.
 
@@ -6,7 +6,7 @@ Sistema de Asesoría Inteligente mediante Chatbot con IA para la Recomendación 
 
 ## 📌 Descripción
 
-GiftHub es una plataforma web diseñada para simplificar la elección de regalos personalizados mediante un chatbot inteligente basado en reglas.
+Memora es una plataforma web diseñada para simplificar la elección de regalos personalizados mediante un chatbot inteligente basado en reglas.
 
 El sistema permite:
 
@@ -65,4 +65,3 @@ La plataforma está estructurada en los siguientes módulos:
 ---
 
 ## 📂 Estructura del Proyecto
-
