@@ -1,3 +1,6 @@
+import tailwindcssAnimate from 'tailwindcss-animate';
+import tailwindcssForms from '@tailwindcss/forms';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -16,9 +19,11 @@ export default {
         gold:      '#BC9968',
         beige:     '#F5E6D0',
         // Neutros
-        'neutral-gray': '#B0B0B0',
+        white:     '#FFFFFF',
+        gray:      '#B0B0B0',
+        black:     '#000000',
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [tailwindcssAnimate, tailwindcssForms],
 }
