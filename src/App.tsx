@@ -4,6 +4,9 @@
 // ─────────────────────────────────────────────────────────────
 
 import { useState, useEffect, useRef } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./Login";
+import Admin from "./Admin";
 import Navbar  from "./Navbar";
 import Footer  from "./Footer";
 import { COLORS, SECTION_IDS, SECTION_LABELS, testimonials, features } from "./constants";
@@ -182,7 +185,7 @@ const globalCSS = `
 // ─────────────────────────────────────────────────────────────
 // App — componente principal
 // ─────────────────────────────────────────────────────────────
-export default function App() {
+function LandingPage() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [typedText,         setTypedText]         = useState("");
   const [chatStep,          setChatStep]           = useState(0);
@@ -589,5 +592,22 @@ export default function App() {
 
       </div>
     </>
+  );
+}
+// ─────────────────────────────────────────────────────────────
+// Enrutador Principal
+// ─────────────────────────────────────────────────────────────
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        {/* Ruta pública (Todo lo que hizo Beymar) */}
+        <Route path="/" element={<LandingPage />} />
+        
+        {/* Tus nuevas rutas privadas */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/admin" element={<Admin />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
