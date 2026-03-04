@@ -4,6 +4,7 @@
 // ─────────────────────────────────────────────────────────────
 
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom"; // <-- IMPORTANTE: Importamos Link
 import logo from "./assets/logo.png";
 import { COLORS } from "./constants";
 
@@ -15,6 +16,13 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Definimos las rutas para cada botón
+  const navItems = [
+    { name: "Cómo Funciona", path: "/" },
+    { name: "Asesor IA", path: "/asesor" },
+    { name: "Nosotros", path: "/nosotros" } // <-- Aquí está tu ruta
+  ];
 
   return (
     <nav
@@ -33,7 +41,7 @@ export default function Navbar() {
       }}
     >
       {/* Logo + nombre */}
-      <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+      <Link to="/" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none" }}>
         <img
           src={logo}
           alt="Memora"
@@ -49,14 +57,14 @@ export default function Navbar() {
         >
           Memora
         </span>
-      </div>
+      </Link>
 
       {/* Links de navegación */}
       <div style={{ display: "flex", gap: "36px", alignItems: "center" }}>
-        {["Cómo Funciona", "Asesor IA", "Nosotros"].map((item) => (
-          <a key={item} href="#" className="nav-link">
-            {item}
-          </a>
+        {navItems.map((item) => (
+          <Link key={item.name} to={item.path} className="nav-link">
+            {item.name}
+          </Link>
         ))}
         <button
           className="btn-primary"
